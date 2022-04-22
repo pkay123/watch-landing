@@ -1,0 +1,64 @@
+.app__popular {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainColor);
+}
+
+.app__popular-container {
+  max-width: 70rem;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.app__inner-carousel {
+  display: grid;
+  grid-template-columns: repeat(6, 270px);
+  gap: 0.5rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.app__popular-content {
+  min-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular__img {
+  max-width: 100%;
+  width: 50%;
+  margin-bottom: 1rem;
+  pointer-events: none;
+  transform: rotate(23deg);
+}
+
+.app__carousel {
+  overflow: hidden;
+  cursor: grab;
+}
+
+@media (max-width: 65em) {
+  .app__popular {
+    height: fit-content;
+  }
+
+  .popular__img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 43em) {
+  .app__inner-carousel {
+    grid-template-columns: repeat(6, auto);
+  }
+
+  .app__popular-content {
+    min-width: 15rem;
+  }
+
+  .popular__img {
+    width: 80%;
+  }
+}

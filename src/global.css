@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --mainColor: #1e1d1d;
+  --golden: #ff7206;
+  --primary-text: #060606;
+  --secondary-text: #747474;
+  --other-text: #bababa;
+
+  --font-base: "Cormorant Upright", serif;
+  --font-alt: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--other-text);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: var(--font-base);
+}
+
+.subtitle {
+  font-family: var(--font-alt);
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background-color: var(--golden);
+  color: var(--primary-text);
+  cursor: pointer;
+}
+
+.scroll {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (hover: hover) {
+  .scroll:hover {
+    color: var(--golden);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 65em) {
+  .title {
+    font-size: clamp(1.8rem, 1.81vw, 2.5rem);
+  }
+
+  .subtitle {
+    font-size: clamp(0.9rem, 1.81vw, 1rem);
+  }
+}
